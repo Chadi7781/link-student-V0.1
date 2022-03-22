@@ -6,23 +6,23 @@ import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import GroupIcon from "@mui/icons-material/Group";
 import ChatIcon from '@mui/icons-material/Chat';
 import NotificationsIcon from '@mui/icons-material/Notifications';
-import {Avatar} from '@mui/material';
 import AppOutlinedIcon from '@mui/icons-material/AppsOutlined'
 
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import OndemandVideoSharp from '@mui/icons-material/OndemandVideoSharp';
 import Head from 'next/head';
+import Footer from '../components/footer/footer';
 
 function home() {
   return (
-    <div className="space-y-10 relative">
+    <div className="space-y-7 relative">
  <Head>
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
               <header className="flex justify-around items-center py-4">
-      <div className="relative w-36 h-24">
+      <div className="relative w-36 h-24 ">
         <Image src={'/assets/images/logo/logosociete.png'} width="100%" height="100%" objectFit="contain" layout="fill"/>
       </div>
 
@@ -64,8 +64,8 @@ function home() {
         </h1>
 
         <div className="space-y-4">
-          <div className="intent">
-            <h2 className="text-xl">Search PIDEV ressources</h2>
+          <div className="intent ">
+            <h2 className="text-xl">Search PIDEV ressources</h2><Image src={"/assets/images/esprit.jpg"} width={100} height={100}/>
             <ArrowForwardIosRoundedIcon className="text-gray-700"/>
           </div>
 
@@ -90,7 +90,7 @@ function home() {
         </div>
       
       </div> </div>
-      <div className="relative xl:absolute w-80 h-80 xl:w-[610px] xl:h-[610px] top-14 right-10 p-4">
+      <div className="relative xl:flex  w-80 h-80 xl:w-[610px] xl:h-[610px] mx-6 py-35 p-10">
           <Image src="https://rb.gy/vkzpzt" layout="fill" priority />
 
 
@@ -102,8 +102,30 @@ function home() {
 
       
     </main>
-
-    
+    <div className="bg-gray-100 overflow-y-hidden">
+            <div className="mx-auto container py-12 px-4">
+                <div className="w-full flex justify-center">
+                    <div className="w-full md:w-11/12 xl:w-10/12 bg-gradient-to-r from-white-500
+                    rounded-md
+                    to-white-700 md:py-8 md:px-8 px-5 py-4 xl:px-12 xl:py-16">
+                        <div>
+                            <div className="flex flex-wrap items-center md:flex-row flex-col-reverse">
+                                <div className="md:w-2/3 w-full pb-6 md:pb-0 md:pr-6 flex-col md:block flex items-center justify-center md:pt-0 pt-4">
+                                    <div>
+                                        <h1 role="heading" className="text-xl md:text-2xl lg:text-4xl xl:text-4xl lg:w-10/12 text-black font-black leading-6 lg:leading-10 md:text-left text-center">Become a member and start building the next big thing</h1>
+                                    </div>
+                                    <button role="button" aria-label="Join the community" className="mt-5 lg:mt-8 py-3 lg:py-4 px-4 lg:px-8 bg-gray-200 font-bold  text-indigo-700 rounded-lg text-sm lg:text-lg xl:text-xl hover:bg-opacity-90  focus:ring-2 focus:ring-offset-2 focus:ring-indigo focus:outline-none">Join the community</button>
+                                </div>
+                                <div className="md:w-1/3 w-2/3">
+                                    <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/CTA.png" alt="cartoon avatars" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <Footer/>
     </div>
   
   )
